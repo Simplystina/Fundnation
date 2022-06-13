@@ -3,6 +3,7 @@ import React from 'react'
 import './Navbar.css'
 import logo from '../../images/Logo.png'
 import {IoWalletOutline} from 'react-icons/io5'
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -30,7 +31,7 @@ const Navbar = () => {
                    variant='solid'
                    textTransform='uppercase'
                 >Create a Project</Button>
-                <Button
+                <Link to='signin'><Button
                   borderRadius='50px'
                   bg='rgba(194, 15, 162, 1)'
                   color='white'
@@ -39,7 +40,7 @@ const Navbar = () => {
                   lineHeight='24px'
                   variant='solid'
                   textTransform='uppercase'
-                >Sign in</Button>
+                >Sign in</Button></Link>
                 <Avatar bg='rgba(194, 15, 162, 1)' color='white' icon={<IoWalletOutline fontSize='1.5rem'/>}></Avatar>
             </Flex>
         </Flex>

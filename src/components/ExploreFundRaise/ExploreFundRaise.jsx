@@ -1,4 +1,4 @@
-import { Box, Text, SimpleGrid, Flex, ButtonGroup, Button, Avatar} from '@chakra-ui/react'
+import { Box, Text, SimpleGrid, Flex, ButtonGroup, Button, Avatar, Progress} from '@chakra-ui/react'
 import React from 'react'
 import {MdVerifiedUser} from 'react-icons/md'
 import {IoIosFingerPrint} from 'react-icons/io'
@@ -31,15 +31,15 @@ const ExploreFundRaise = () => {
                   bgSize='cover'
                   borderTopRadius='12px'
                   h='50%'>
-                    <Flex justifyContent='space-between'>
+                    <Flex justifyContent='space-between' p='7px 4px'>
                         <ButtonGroup>
-                            <Button><MdVerifiedUser/> Veri</Button>
-                            <Button></Button>
+                            <Button leftIcon={<MdVerifiedUser fontSize={20}/>} borderRadius='100px' fontWeight='600' fontSize='11px'lineHeight='16.5px' colorScheme='blackAlpha' color='white'> Verified</Button>
+                            <Button leftIcon={<IoIosFingerPrint fontSize={20}/>} borderRadius='100px' fontWeight='600' fontSize='11px'lineHeight='16.5px' colorScheme='blackAlpha' color='white'>Trace</Button>
                         </ButtonGroup>
-                        <ButtonGroup>
-                            <Button></Button>
-                            <Avatar></Avatar>
-                        </ButtonGroup>
+                        <Flex alignItems='center'>
+                            <Button rightIcon={<AiOutlineHeart fontSize={20} mr={5}/>} color='rgba(34, 32, 41, 1)' fontSize='12px' lineHeight='18px' borderRadius='100px'>498 </Button>
+                            <Avatar bg='white' icon={<BiDownload fontSize='1.5rem' color='#333536' />}></Avatar>
+                        </Flex>
                     </Flex>
 
                 </Box>
@@ -97,6 +97,7 @@ const ExploreFundRaise = () => {
                          textTransform='uppercase'
                         >Amount goal: {target} ICP </Text>
                     </Flex>
+                    <Progress size='xs' value={40} borderRadius='20px' colorScheme='pink'></Progress>
                 </Box>
             </Box>
                     

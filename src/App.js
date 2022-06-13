@@ -1,6 +1,6 @@
 import React  from "react";
 import {Routes, Route, BrowserRouter as Router} from 'react-router-dom'
-import {LandingPage} from './Pages/index'
+import {LandingPage, Signin} from './Pages/index'
 
 
 const App = () => {
@@ -8,6 +8,7 @@ const App = () => {
     <Router>
       <Routes>
           <Route  index path='/' element={<LandingPage/>}/>
+          <Route  index path='/signin' element={<Signin/>}/>
       </Routes>
     </Router>
   )
