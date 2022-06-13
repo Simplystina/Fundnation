@@ -9,7 +9,8 @@ export const data = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget eu in proin lectus vulputate accumsan. Euismod senectus cursus at id ac vel Eget eu in proin lectus vulputate accumsan. Euismod senectus cursus at id ac  ',
         amount_raised: 460,
         target: 200,
-        img: explore1
+        img: explore1,
+        id:1
     },
     {
         title: 'feed the homeless',
@@ -17,13 +18,15 @@ export const data = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget eu in proin lectus vulputate accumsan. Euismod senectus cursus at id ac vel Eget eu in proin lectus vulputate accumsan. Euismod senectus cursus at id ac  ',
         amount_raised: 460,
         target: 200,
-        img: explore2
+        img: explore2,
+        id:2
     },{
         title: 'Forest conservation',
         name: 'kenneth koles',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget eu in proin lectus vulputate accumsan. Euismod senectus cursus at id ac vel Eget eu in proin lectus vulputate accumsan. Euismod senectus cursus at id ac  ',
         amount_raised: 460,
         target: 200,
-        img: explore3
+        img: explore3,
+        id:3
     },
 ]

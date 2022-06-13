@@ -31,7 +31,7 @@ const Navbar = () => {
                    variant='solid'
                    textTransform='uppercase'
                 >Create a Project</Button>
-                <Link to='signin'><Button
+                <Link to='/signin'><Button
                   borderRadius='50px'
                   bg='rgba(194, 15, 162, 1)'
                   color='white'
