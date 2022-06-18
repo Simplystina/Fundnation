@@ -48,6 +48,7 @@ const LandingPage = () => {
             border='1px solid rgba(255, 169, 240, 1)'
             display='block'
             m='20px auto'
+            className='btn-effect'
         >Button</Button>
     </Box>
     <ExploreFundRaise/>

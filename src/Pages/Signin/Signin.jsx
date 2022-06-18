@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar } from '../../components'
+import { ExploreFundRaise, Navbar } from '../../components'
 import { Box, Button, ButtonGroup, Flex , Image, SimpleGrid, Text} from '@chakra-ui/react'
 import person from '../../images/person.png'
 import {MdContentCopy} from 'react-icons/md'
@@ -103,10 +103,11 @@ const Signin = () => {
             </Flex>
         </SimpleGrid>
         <ButtonGroup ml='30px'>
-            <Button fontSize='12px' lineHeight='18px' bg='rgba(194, 15, 162, 1)' fontWeight='500' color='white' borderRadius='20px'>Erika Martin's Project</Button>
-            <Button fontSize='12px' lineHeight='18px' borderRadius='20px'>Donations</Button>
-            <Button fontSize='12px' lineHeight='18px' borderRadius='20px'>Likes</Button>
+            <Button className='btn-effect' fontSize='12px' lineHeight='18px' bg='rgba(194, 15, 162, 1)' fontWeight='500' color='white' borderRadius='20px'>Erika Martin's Project</Button>
+            <Button className='btn-effect'fontSize='12px' lineHeight='18px' borderRadius='20px'>Donations</Button>
+            <Button className='btn-effect' fontSize='12px' lineHeight='18px' borderRadius='20px'>Likes</Button>
         </ButtonGroup>
+        <ExploreFundRaise/>
     </Box>
   )
 }

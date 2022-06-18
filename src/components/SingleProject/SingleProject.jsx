@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const SingleProject = ({data}) => {
     const { title, name, text, amount_raised, target, img, id} = data
   return (
-    <Link to={`donation/${id}`}>
+    <Link to={`/donation/${id}`}>
            <Box bg='white' h='422px' borderRadius='12px' pos='relative'>
                 <Box 
                   bgImage={`url(${img})`}

@@ -6,7 +6,7 @@ import SingleProject from '../SingleProject/SingleProject'
 
 const ExploreFundRaise = () => {
   return (
-    <Box  bg='#F5F5F5' p='50px 30px' m={0}>
+    <Box  bg='#F5F5F5' p='35px 30px' m={0}>
         <Text
           color='#36313D'
           fontFamily='Poppins'

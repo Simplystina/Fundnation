@@ -18,10 +18,11 @@ const Navbar = () => {
                  fontFamily='Poppins'
                  letterSpacing='2%'
                  variant='solid'
+                 className='btn-effect'
                >Projects</Button>
             </Flex>
             <Flex  w='30%' justifyContent='space-between' alignItems='center'>
-                <Button
+              <Link to='/projects'> <Button
                    borderRadius='50px'
                    bg='rgba(194, 15, 162, 1)'
                    color='white'
@@ -30,7 +31,8 @@ const Navbar = () => {
                    lineHeight='24px'
                    variant='solid'
                    textTransform='uppercase'
-                >Create a Project</Button>
+                   className='btn-effect'
+                >Create a Project</Button> </Link>
                 <Link to='/signin'><Button
                   borderRadius='50px'
                   bg='rgba(194, 15, 162, 1)'
@@ -40,8 +42,9 @@ const Navbar = () => {
                   lineHeight='24px'
                   variant='solid'
                   textTransform='uppercase'
+                  className='btn-effect'
                 >Sign in</Button></Link>
-                <Avatar bg='rgba(194, 15, 162, 1)' color='white' icon={<IoWalletOutline fontSize='1.5rem'/>}></Avatar>
+                <Avatar className='btn-effect' bg='rgba(194, 15, 162, 1)' color='white' icon={<IoWalletOutline fontSize='1.5rem'/>}></Avatar>
             </Flex>
         </Flex>
     </Box>
