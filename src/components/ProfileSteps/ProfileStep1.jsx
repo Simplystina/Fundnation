@@ -1,8 +1,21 @@
 import { Text, Box, Input, Textarea, Flex, Stack, Button} from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 const ProfileStep1 = () => {
+  const ref = useRef(null)
+  const [file, setFile] = useState(null)
+  const [fileName, setFileName] = useState("Upload File")
+  const updateFile = (e)=>{
+    setFileName(e.target.value.substring(12))
+    setFile(e.target.files[0])
+
+  }
+  useEffect(()=>{
+console.log(file)
+
+  },[file])
   return (
     <Box mb='15px'>
        <Text
@@ -15,14 +28,14 @@ const ProfileStep1 = () => {
         Let's get Started
        </Text>
        <Flex mt='20px' justifyContent='space-between' >
-          <Input placeholder='First name' w='40%'/>
+          <Input placeholder='First name' w='40%'  />
         
           <Input placeholder='Last name' w='40%'/>
        </Flex>
        <Flex mt='20px' justifyContent='space-between' >
-          <Input placeholder='uploaded file' w='70%'/>
-        
-          <Button w='25%'>UPLOAD</Button>
+          <Input disabled placeholder={fileName} w='70%'/>
+          <Button w="25%" onClick={()=>ref.current.click()}>UPLOAD</Button>
+          <Input ref={ref} display={"none"} placeholder={"UPLOAD"} type='file' onChange={(e)=>updateFile(e)}></Input>
        </Flex>
        <Text
         color='rgba(54, 49, 61, 1)'
