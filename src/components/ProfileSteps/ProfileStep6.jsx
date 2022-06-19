@@ -2,9 +2,17 @@ import React from 'react'
 import {Box, Text, Flex, Input,Button, InputGroup,InputLeftElement} from '@chakra-ui/react'
 import {AiOutlineLink} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import {useSelector} from 'react-redux'
 
 
 const ProfileStep6 = () => {
+    
+  const createData = useSelector((state) => state.create);
+  useEffect(()=>{
+    console.log(createData,'create data') //this createData contains the object that you need. 
+    // You should do anything you want with the data from here.
+  })
   return (
     <Box mb='15px'>
         <Text
@@ -41,7 +49,7 @@ const ProfileStep6 = () => {
                    />
                    <Input fontSize='14px' placeholder='https://www.fundnation.com/sa' />
             </InputGroup>
-            <Button color='black' bg='rgba(179, 176, 184, 1)' fontSize='12px' w='20%'>UPLOAD</Button>
+            <Button color='black' bg='rgba(179, 176, 184, 1)' fontSize='12px' w='20%'>COPY</Button>
        </Flex>
        <Link to='/signin'>
          <Button 
