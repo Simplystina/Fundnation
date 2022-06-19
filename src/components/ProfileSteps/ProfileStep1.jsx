@@ -14,18 +14,10 @@ const ProfileStep1 = () => {
   const navigate = useNavigate()
 
   const ref = useRef(null)
-  const [file, setFile] = useState(null)
-  const [fileName, setFileName] = useState("Upload File")
+
   const [firstname,setFirstname] = useState()
   const [lastname,setLastname] = useState()
   const [text, setText] = useState()
-
-
-  const updateFile = (e)=>{   
-    setFileName(e.target.value.substring(12))
-    setFile(URL.createObjectURL(e.target.files[0]))
-
-  }
 
   const nextPage = ()=>{
    if(firstname && lastname && text){
@@ -39,12 +31,7 @@ const ProfileStep1 = () => {
     toast.error("Please fill all the field!");
    }
   }
-  useEffect(()=>{
-   
-    console.log(file)
-    console.log(fileName)
-
-  },[file])
+  
   return (
     <Box mb='15px'>
        <Text
@@ -60,11 +47,6 @@ const ProfileStep1 = () => {
           <Input placeholder='First name' required w='40%' onChange={(e)=>setFirstname(e.target.value)}/>
         
           <Input placeholder='Last name' required w='40%' onChange={(e)=>setLastname(e.target.value)}/>
-       </Flex>
-       <Flex mt='20px' justifyContent='space-between' >
-          <Input disabled placeholder={fileName} w='70%'/>
-          <Button w="25%" onClick={()=>ref.current.click()}>UPLOAD</Button>
-          <Input ref={ref} display={"none"} placeholder={"UPLOAD"} type='file' accept='image/*' onChange={(e)=>updateFile(e)}></Input>
        </Flex>
        <Text
         color='rgba(54, 49, 61, 1)'
