@@ -7,14 +7,34 @@ import { Link } from "react-router-dom";
 import connect from "../../helpers/connectWallet";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useGlobalContext } from "../../context";
+import { updateActor } from "../features/createProjectSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 const Navbar = () => {
+  // const {setActor, actor} =  useGlobalContext()
+  const dispatch = useDispatch();
+  const { actor } = useSelector((state) => state.create);
   const [wallet, setWallet] = useState(null);
   useEffect(() => {
-    console.log(wallet)
+    // console.log(wallet)
+    if (wallet) {
+      dispatch(
+        updateActor({
+          actor: wallet,
+        })
+      );
+    }
   }, [wallet]);
+  useEffect(() => {
+    console.log("Actor", actor);
+  }, [actor]);
   const connectWallet = async () => {
-    setWallet(await connect());
+    try {
+      setWallet(await connect()); 
+    } catch (error) {
+      console.error(error)
+    }
   };
   return (
     <Box m="0 30px">
@@ -27,6 +47,14 @@ const Navbar = () => {
             src={logo}
             alt="logo"
           />
+          {/* <Button onClick={async()=>{
+          try {
+             const payer = await  wallet.pay(1, "12345");
+             console.log(payer)
+          } catch (error) {
+            console.error(error)
+          }
+          }}>Pay</Button> */}
           <Button
             borderRadius="50px"
             color="rgba(92, 88, 102, 1)"
