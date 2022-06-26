@@ -3,7 +3,10 @@ import {Routes, Route, BrowserRouter as Router} from 'react-router-dom'
 import { Authenticate, ProfileStep1,ProfileStep2,ProfileStep3,ProfileStep4,ProfileStep5,ProfileStep6 } from "./components";
 import {CreateProject, LandingPage, Signin, SingleDonation, ProfileInfo} from './Pages/index'
 
+// 3. Extend the themeconst theme = extendTheme({ breakpoints })
 const App = () => {
+  
+
   return (
     <Router>
       <Routes>

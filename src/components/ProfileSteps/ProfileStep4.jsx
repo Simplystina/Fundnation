@@ -78,7 +78,7 @@ const ProfileStep4 = () => {
                 pointerEvents='none'
                 children={<AiOutlineLink color='gray.300' />}
             />
-            <Input type='tel' placeholder='Add a youtube link' onChange={(e)=>{setYoutube(e.target.value)}} />
+            <Input placeholder='Add a youtube link' onChange={(e)=>{setYoutube(e.target.value)}} />
         </InputGroup>
         <Button 
           m='30px 0 5px 0' 
@@ -108,7 +108,7 @@ const ProfileStep4 = () => {
             color='rgba(92, 88, 102, 1)'
             fontWeight='400'
             textAlign='center'
-            w='300px'
+            w='100%'
             m='0 auto'
           >By continuing, you agree to Fundnation Terms and acknowledge receipt of our Privacy Policy.</Text>
           <ToastContainer 

@@ -1,3 +1,33 @@
-.landing_page_container{
-    
+.menu-icon{
+    font-size: 30px;
+    color: rgba(194, 15, 162, 1);
+    position: fixed;
+    top: 0;
+    left: 1;
+    margin: 10px;
+    z-index: 3;
+    display: none;
+}
+
+@media screen and (max-width:520px) {
+    .menu-icon{
+        display: block;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .heading-texts{
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width:333px) {
+    .heading-text1{
+        font-size: 30px !important;
+        line-height: 40px !important;
+    }
+    .heading-text2{
+        font-size: 40px !important;
+        line-height: 50px !important;
+    }
 }

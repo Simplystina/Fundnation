@@ -16,7 +16,7 @@ const Modal = () => {
     <div className='modal'>
         <div className='modal_content'>
            <Box onClick={closeModal} pos='absolute' right='2' fontSize={30}> <GrFormClose/></Box>
-            <Flex alignItems='center' p='1rem 3rem 0 3rem'>
+            <Flex alignItems='center' p={{base:'1rem 3rem 0 3rem', md:'1rem 1rem 0 1rem', sm:'1rem 0rem 0 0rem'}}>
                 <Img mt='10px' boxSize='50px'objectFit='cover' src={logo} alt='logo'/>
                 <Text
                   color='rgba(54, 49, 61, 1)'
@@ -35,7 +35,7 @@ const Modal = () => {
                fontWeight='400'
                lineHeight='22px'
                letterSpacing='2%'
-               pl='4rem'
+               pl={{base:'4rem', md:'4rem', sm:'2rem'}}
             >
                 please sign in to get started
             </Text>

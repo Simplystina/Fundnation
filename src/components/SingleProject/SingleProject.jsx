@@ -5,25 +5,26 @@ import {AiOutlineHeart} from 'react-icons/ai'
 import {BiDownload} from 'react-icons/bi'
 import { Box, Text, Flex, ButtonGroup, Button, Avatar, Progress} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import './SingleProject.css'
 
 const SingleProject = ({data}) => {
     const { title, name, text, amount_raised, target, img, id} = data
   return (
     <Link to={`/donation/${id}`}>
-           <Box bg='white' h='422px' borderRadius='12px' pos='relative'>
+           <Box bg='white' h='422px' className='single-project' borderRadius='12px' pos='relative'>
                 <Box 
                   bgImage={`url(${img})`}
                   bgRepeat='no-repeat' 
                   bgSize='cover'
                   borderTopRadius='12px'
                   h='50%'>
-                    <Flex justifyContent='space-between' p='7px 4px'>
+                    <Flex w='100%'flexWrap='wrap' justifyContent='space-between' p='7px 4px' className='project-btn-container'>
                         <ButtonGroup>
-                            <Button leftIcon={<MdVerifiedUser fontSize={20}/>} borderRadius='100px' fontWeight='600' fontSize='11px'lineHeight='16.5px' colorScheme='blackAlpha' color='white'> Verified</Button>
-                            <Button leftIcon={<IoIosFingerPrint fontSize={20}/>} borderRadius='100px' fontWeight='600' fontSize='11px'lineHeight='16.5px' colorScheme='blackAlpha' color='white'>Trace</Button>
+                            <Button className='project-btn' leftIcon={<MdVerifiedUser fontSize={20}/>} borderRadius='100px' fontWeight='600' fontSize='10px'lineHeight='16.5px' colorScheme='blackAlpha' color='white'> Verified</Button>
+                            <Button className='project-btn' leftIcon={<IoIosFingerPrint fontSize={20}/>} borderRadius='100px' fontWeight='600' fontSize='10px'lineHeight='16.5px' colorScheme='blackAlpha' color='white'>Trace</Button>
                         </ButtonGroup>
                         <Flex alignItems='center'>
-                            <Button rightIcon={<AiOutlineHeart fontSize={20} mr={5}/>} color='rgba(34, 32, 41, 1)' fontSize='12px' lineHeight='18px' borderRadius='100px'>498 </Button>
+                            <Button className='project-btn' rightIcon={<AiOutlineHeart fontSize={20} />} color='rgba(34, 32, 41, 1)' fontSize='12px' lineHeight='18px' borderRadius='100px'>498 </Button>
                             <Avatar bg='white' icon={<BiDownload fontSize='1.5rem' color='#333536' />}></Avatar>
                         </Flex>
                     </Flex>

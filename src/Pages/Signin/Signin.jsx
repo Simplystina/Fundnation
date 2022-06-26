@@ -1,15 +1,27 @@
 import React from 'react'
-import { ExploreFundRaise, Navbar } from '../../components'
+import { ExploreFundRaise, Navbar, Sidebar } from '../../components'
 import { Box, Button, ButtonGroup, Flex , Image, SimpleGrid, Text} from '@chakra-ui/react'
 import person from '../../images/person.png'
 import {MdContentCopy} from 'react-icons/md'
 import {BiDownload} from 'react-icons/bi'
+import { AiOutlineMenu } from 'react-icons/ai'
 
 const Signin = () => {
+
+  const openSidebar = ()=>{
+    document.getElementById("sidebar").style.width = "14rem";
+  }
+
   return (
-    <Box bg='#F5F5F5' h='100vh'overflowY='scrol'>
+    <Box bg='#F5F5F5' overflowY='scrol'>
         <Navbar/>
-        <Flex width='100%' justifyContent='center' alignItems='center'>
+        <Sidebar/>
+        <AiOutlineMenu onClick={openSidebar} className='menu-icon'/>
+        <Flex width='100%' 
+                  justifyContent='center' 
+                alignItems='center'
+                flexDir={{base:'column',md:'column', lg:'row'}}
+              >
             <Image
                borderRadius='full'
                boxSize='150px'
@@ -22,21 +34,25 @@ const Signin = () => {
                  fontSize='24px'
                  lineHeight='36px'
                  fontWeight='700'
+                 textAlign={{base:'center',md:'center', lg:'none'}}
                 >
                   Erika Martin</Text>
-                  <Flex alignItems='center' pt={3}  justifyContent='space-between'><Text
+                  <Flex alignItems='center' pt={3} m='0 30px' justifyContent='space-between'><Text
                     color='#5C5866'
                     lineHeight ='22px'
                     font-size='16px'
                     mr={2}
+                    flexWrap='wrap'
                   >0dh768jg803jgnna833ndldn02837 c74bs5la64p28v63v </Text><MdContentCopy color='rgba(194, 15, 162, 1)'/> <BiDownload color='rgba(194, 15, 162, 1)'/></Flex>
             </Box>
         </Flex>
-        <SimpleGrid columns={2} spacing={10} w='70%' m='20px auto'>
+        <SimpleGrid minChildWidth={{base:'200px',md:'300px',lg:'300px'}}  spacing={10} w='70%' m='20px auto'>
             <Flex bg='white' border='1px solid rgba(157, 153, 163, 1)'
-               justifyContent='space-around'
+               justifyContent={{sm:'center', md:'space-around', lg:'space-around'}}
                p={10}
                borderRadius='12px'
+               flexDir={{lg:'row', md:'row', sm:'column'}}
+               alignItems={{sm:'center', md:'none',lg:'none'}}
             >
                 <Box>
                     <Text
@@ -68,9 +84,11 @@ const Signin = () => {
                 </Box>
             </Flex>
             <Flex bg='white' border='1px solid rgba(157, 153, 163, 1)'
-               justifyContent='space-around'
+               justifyContent={{sm:'center', md:'space-around', lg:'space-around'}}
                p={10}
                borderRadius='12px'
+               flexDir={{lg:'row', md:'row', sm:'column'}}
+               alignItems={{sm:'center', md:'none',lg:'none'}}
             >
                 <Box>
                     <Text
@@ -102,7 +120,7 @@ const Signin = () => {
                 </Box>
             </Flex>
         </SimpleGrid>
-        <ButtonGroup ml='30px'>
+        <ButtonGroup ml={{md:'30px', base:'0px', lg:'30px'}}>
             <Button className='btn-effect' fontSize='12px' lineHeight='18px' bg='rgba(194, 15, 162, 1)' fontWeight='500' color='white' borderRadius='20px'>Erika Martin's Project</Button>
             <Button className='btn-effect'fontSize='12px' lineHeight='18px' borderRadius='20px'>Donations</Button>
             <Button className='btn-effect' fontSize='12px' lineHeight='18px' borderRadius='20px'>Likes</Button>

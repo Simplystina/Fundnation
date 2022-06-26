@@ -84,7 +84,7 @@ const ProfileStep1 = () => {
             color='rgba(194, 15, 162, 1)'
             fontWeight='400'
             textAlign='center'
-            w='300px'
+            w='100%'
             m='0 auto'
           >By continuing, you agree to Fundnation Terms and acknowledge receipt of our Privacy Policy.</Text>
          <ToastContainer 

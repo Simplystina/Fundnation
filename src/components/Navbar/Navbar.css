@@ -3,3 +3,18 @@
     background-color: transparent;
     border: 1px solid rgba(194, 15, 162, 1);
 }
+@media screen and (max-width:620px) {
+   .navbar-big{
+        display: none !important;
+    }
+    .navbar-small{
+        opacity: 1 !important;
+    }
+}
+
+@media screen and (max-width:520px){
+    .navbar-small{
+        opacity: 0 !important;
+        display: none !important;
+    }
+}

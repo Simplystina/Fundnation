@@ -24,3 +24,24 @@
     position: relative;
    
   }
+
+
+ @media screen and (max-width:1020px){
+  .modal_content{
+    width: 40%;
+    margin: 15% auto;
+  }
+}
+@media screen and (max-width: 756px){
+  .modal_content{
+    width: 50%;
+    margin: 15% auto;
+  }
+}
+
+@media screen and (max-width: 490px){
+  .modal_content{
+    width: 60%;
+    margin: 20% auto;
+  }
+}

@@ -17,7 +17,7 @@ const ExploreFundRaise = () => {
         >
             Explore
         </Text>
-        <SimpleGrid minChildWidth='120px' spacing='40px'>
+        <SimpleGrid minChildWidth={{sm:'300px', md:'350px', lg:'350px'}} spacing='60px'>
             {
                 data.map((item)=>{
                   
