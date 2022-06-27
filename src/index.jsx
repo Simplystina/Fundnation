@@ -7,7 +7,9 @@ import { extendTheme } from '@chakra-ui/react';
 
 import { store } from './store';
 import { Provider } from 'react-redux';
+import {AppProvider} from "./context"
 
+<<<<<<< HEAD:src/index.js
 // 2. Update the breakpoints as key-value pairs
 const breakpoints = {
   sm: '320px',
@@ -24,6 +26,17 @@ root.render(
      <Provider store={store}>
         <App />
      </Provider>
+=======
+const root = ReactDOM.createRoot(document.getElementById('app'));
+root.render(
+  <React.StrictMode>
+    <ChakraProvider>
+      <AppProvider>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </AppProvider>
+>>>>>>> 5e4089f0091889c3a9c430ce285beffb5b5433ee:src/index.jsx
     </ChakraProvider>
   </React.StrictMode>
 );
